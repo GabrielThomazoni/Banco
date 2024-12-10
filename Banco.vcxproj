@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="src\Account.cpp" />
     <ClCompile Include="src\CPF.cpp" />
+    <ClCompile Include="src\Current.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\People.cpp" />
     <ClCompile Include="src\Proprietor.cpp" />
@@ -30,6 +31,7 @@
   <ItemGroup>
     <ClInclude Include="include\Account.hpp" />
     <ClInclude Include="include\CPF.hpp" />
+    <ClInclude Include="include\Current.hpp" />
     <ClInclude Include="include\People.hpp" />
     <ClInclude Include="include\Proprietor.hpp" />
     <ClInclude Include="include\Savings.hpp" />

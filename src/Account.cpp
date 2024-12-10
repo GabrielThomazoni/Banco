@@ -38,7 +38,7 @@ void Account::cashOut(float withdraw) {
 		else if (typeAccount == 2) typeTax = 0.03;
 		else std::cout << "Opção inválida!"; exit(1);*/
 
-		float tax = withdraw * 0.05;
+		float tax = withdraw * valTax();
 
 		if ((balance - tax - withdraw) > 0) {
 			balance -= (withdraw + tax);

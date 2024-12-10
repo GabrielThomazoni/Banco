@@ -15,12 +15,12 @@ protected:
 
 public:
 	Account(Proprietor proprietor);
-	~Account();
+	virtual ~Account();
 	void getID();
-
 	void getBalance();
 	void cashIn(float deposit);
 	void cashOut(float withdraw);
 	void getAccounts();
+	virtual float valTax() const = 0;
 
 };

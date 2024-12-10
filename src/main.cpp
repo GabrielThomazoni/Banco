@@ -3,6 +3,7 @@
 #include"../include/Account.hpp"
 #include"../include/Proprietor.hpp"
 #include"../include/Savings.hpp"
+#include "../include/Current.hpp"
 
 int main() {
 
@@ -17,7 +18,7 @@ int main() {
 	std::cin >> name;
 
 	Proprietor propri(cpf,name);
-	Account GT(propri);
+	Current GT(propri);
 	Savings GT2(Proprietor(CPF(cpf), name));
 	//Account GT3(Proprietor(CPF(cpf), name));
 	

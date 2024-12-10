@@ -1,12 +1,12 @@
 #pragma once
 #include "Account.hpp"
 
-class Savings final: public Account
+class Current final : public Account
 {
 private:
 
 public:
-	Savings(Proprietor proprietor);
+	Current(Proprietor proprietor);
 	float valTax() const override;
 };
 
