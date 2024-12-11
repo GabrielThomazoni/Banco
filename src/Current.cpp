@@ -8,3 +8,8 @@ Current::Current(Proprietor proprietor) : Account(proprietor) {
 float Current::valTax() const {
 	return 0.05;
 }
+
+void Current::transferTo(Account& account, float value) {
+	cashOut(value);
+	account.cashIn(value);
+}

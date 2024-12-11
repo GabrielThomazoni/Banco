@@ -37,4 +37,5 @@ int main() {
 	GT2.cashIn(500);
 	GT2.cashOut(200);
 
+	GT.transferTo(GT2, 100);
 }
