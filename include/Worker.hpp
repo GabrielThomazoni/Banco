@@ -10,7 +10,9 @@ private:
 
 public:
 	Worker(CPF cpf, std::string name, float salary);
-	std::string getName();
-	std::string getCpf();
+	std::string getName() const;
+	std::string getCpf() const;
+	float getSalary() const;
+	virtual float bonus() const = 0;
 };
 

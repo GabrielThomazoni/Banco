@@ -6,10 +6,14 @@ Worker::Worker(CPF cpf, std::string name, float salary) : People(cpf, name), sal
 
 }
 
-std::string Worker::getName() {
+std::string Worker::getName() const{
 	return name;
 }
 
-std::string Worker::getCpf() {
+std::string Worker::getCpf() const{
 	return cpf.getCpf();
+}
+
+float Worker::getSalary() const {
+	return salary;
 }

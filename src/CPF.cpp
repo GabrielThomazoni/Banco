@@ -8,6 +8,6 @@ CPF::CPF(std::string cpf) : cpf(cpf) {
 	}
 }
 
-std::string CPF::getCpf() {
+std::string CPF::getCpf() const{
 	return cpf;
 }

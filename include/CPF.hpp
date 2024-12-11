@@ -8,6 +8,6 @@ private:
 
 public:
 	CPF(std::string cpf);
-	std::string getCpf();
+	std::string getCpf() const;
 };
 
