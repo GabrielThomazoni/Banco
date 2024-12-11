@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Account.cpp" />
+    <ClCompile Include="src\Authen.cpp" />
     <ClCompile Include="src\Cashier.cpp" />
     <ClCompile Include="src\CPF.cpp" />
     <ClCompile Include="src\Current.cpp" />
@@ -32,6 +33,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Account.hpp" />
+    <ClInclude Include="include\Authen.hpp" />
     <ClInclude Include="include\Cashier.hpp" />
     <ClInclude Include="include\CPF.hpp" />
     <ClInclude Include="include\Current.hpp" />

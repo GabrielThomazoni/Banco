@@ -5,6 +5,12 @@
 #include"../include/Savings.hpp"
 #include "../include/Current.hpp"
 
+
+void Auth(Authen& someone, std::string passwd) {
+	if (someone.verifyAuth(passwd)) std::cout << "Senha correta, login concluído" << std::endl;
+	else std::cout << "Senha Incorreta" << std::endl;
+}
+
 int main() {
 
 	std::string id;
@@ -17,12 +23,12 @@ int main() {
 	std::cout << "Seu primeiro nome:" << std::endl;
 	std::cin >> name;
 
-	Proprietor propri(cpf,name);
+	Proprietor propri(cpf, name, "123");
 	Current GT(propri);
-	Savings GT2(Proprietor(CPF(cpf), name));
-	//Account GT3(Proprietor(CPF(cpf), name));
-	
-	/*Worker worker (CPF("12312312312"), "Gabriel", 1000);
+	Savings GT2(Proprietor(CPF(cpf), name, "123"));
+	/*Account GT3(Proprietor(CPF(cpf), name));
+
+	Worker worker (CPF("12312312312"), "Gabriel", 1000);
 	std::cout << worker.getName();*/
 	GT.getAccounts();
 

@@ -1,12 +1,13 @@
 #pragma once
 #include"Worker.hpp"
+#include"Authen.hpp"
 
-class Manager final : public Worker
+class Manager final : public Worker, Authen
 {
 private:
 	
 public:
-	Manager(CPF cpf, std::string name, float salary);
+	Manager(CPF cpf, std::string name, float salary, std::string passwd);
 	float bonus() const override;
 };
 
