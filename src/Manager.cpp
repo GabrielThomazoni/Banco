@@ -1,6 +1,6 @@
 #include "../include/Manager.hpp"
 
-Manager::Manager(CPF cpf, std::string name, float salary, std::string passwd) : Worker(cpf, name, salary), Authen(passwd) {
+Manager::Manager(CPF cpf, std::string name, float salary, std::string passwd, WeekPay payDay) : Worker(cpf, name, salary, payDay), Authen(passwd) {
 
 }
 

@@ -4,6 +4,7 @@
 #include"../include/Proprietor.hpp"
 #include"../include/Savings.hpp"
 #include "../include/Current.hpp"
+#include "../include/Manager.hpp"
 
 
 void Auth(Authen& someone, std::string passwd) {
@@ -26,10 +27,9 @@ int main() {
 	Proprietor propri(cpf, name, "123");
 	Current GT(propri);
 	Savings GT2(Proprietor(CPF(cpf), name, "123"));
-	/*Account GT3(Proprietor(CPF(cpf), name));
+	//Account GT3(Proprietor(CPF(cpf), name));
 
-	Worker worker (CPF("12312312312"), "Gabriel", 1000);
-	std::cout << worker.getName();*/
+
 	GT.getAccounts();
 
 	std::cout << "CPF do proprietário: " << propri.getCpf() << std::endl;
@@ -44,4 +44,9 @@ int main() {
 	GT2.cashOut(200);
 
 	GT.transferTo(GT2, 100);
+
+	WeekPay payDay = WeekPay::Segunda;
+	Manager managerA(CPF("123.456.789-10"), "José", 1000, "555", payDay);
+	std::cout << (unsigned short int) payDay << std::endl;
+
 }

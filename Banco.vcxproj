@@ -41,6 +41,7 @@
     <ClInclude Include="include\People.hpp" />
     <ClInclude Include="include\Proprietor.hpp" />
     <ClInclude Include="include\Savings.hpp" />
+    <ClInclude Include="include\WeekPay.hpp" />
     <ClInclude Include="include\Worker.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

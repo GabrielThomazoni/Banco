@@ -1,7 +1,7 @@
 #include<iostream>
 #include "../include/Worker.hpp"
 
-Worker::Worker(CPF cpf, std::string name, float salary) : People(cpf, name), salary(salary) {
+Worker::Worker(CPF cpf, std::string name, float salary, WeekPay payDay) : People(cpf, name), salary(salary), payDay(payDay) {
 
 
 }
