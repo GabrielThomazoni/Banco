@@ -9,6 +9,7 @@ public:
 	Current(Proprietor proprietor);
 	float valTax() const override;
 	void transferTo(Account& account, float value);
+	void operator += (Current& transfAccount);
 
 };
 

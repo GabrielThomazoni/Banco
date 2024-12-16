@@ -13,3 +13,7 @@ void Current::transferTo(Account& account, float value) {
 	cashOut(value);
 	account.cashIn(value);
 }
+
+void Current::operator += (Current& transfAccount) {
+	transfAccount.transferTo(*this, transfAccount.getBalance() / 2);
+}

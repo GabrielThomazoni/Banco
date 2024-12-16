@@ -10,7 +10,6 @@ private:
 	
 public:
 	Proprietor(CPF cpf, std::string name, std::string passwd);
-	std::string getCpf();
-	std::string getName();
+	
 };
 

@@ -5,11 +5,4 @@ Proprietor::Proprietor(CPF cpf, std::string name, std::string passwd) : People(c
 
 }
 
-std::string Proprietor::getCpf() {
-	return cpf.getCpf();
-}
-
-std::string Proprietor::getName() {
-	return name;
-}
 

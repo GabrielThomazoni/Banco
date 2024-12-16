@@ -11,8 +11,8 @@ Account::~Account() {
 	numAccounts--;
 }
 
-void Account::getBalance() {
-	std::cout << "Seu saldo é de: " << balance << std::endl;
+float Account::getBalance() const {
+	return balance;
 }
 
 void Account::cashIn(float deposit) {
@@ -21,8 +21,12 @@ void Account::cashIn(float deposit) {
 		std::cout << "Valor de " << deposit << " depositado com sucesso!" << std::endl;
 		std::cout << "Seu saldo agora é de " << balance << std::endl;
 	}
-	else std::cout << "Valor inválido para depósito";
+	else std::cout << "Valor inválido para depósito" << std::endl;
 
+}
+
+void Account::operator += (float deposit) {
+	cashIn(deposit);
 }
 
 void Account::cashOut(float withdraw) {

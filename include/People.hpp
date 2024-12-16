@@ -10,8 +10,8 @@ protected:
 
 public:
 	People(CPF cpf, std::string name);
-	
-
+	std::string getName();
+	std::string getCpf();
 private:
 	void verifyName();
 	

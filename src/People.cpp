@@ -12,5 +12,13 @@ void People::verifyName() {
 	}
 }
 
+std::string People::getName() {
+	return name;
+}
+
+std::string People::getCpf() {
+	return cpf.getCpf();
+}
+
 
 
