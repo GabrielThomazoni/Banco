@@ -20,6 +20,14 @@ std::ostream& operator << (std::ostream& cout, const Account& account) {
 	return cout;
 }
 
+void TestSaque(Account& account) {
+	//std::pair<Account::resCashOut, float> res = account.cashOut(200); embaixo uso "auto" para diminuir o tamanho da definição
+	auto res = account.cashOut(10);
+	if (auto balance = std::get_if<float>(&res)) {
+		std::cout << "Novo Saldo: " << *balance << std::endl;
+	}
+}
+
 int main() {
 
 	std::string id;
@@ -59,8 +67,13 @@ int main() {
 
 	std::cout << GT3;
 
+	GT3.transferTo(GT2, 100);
+	std::cout << GT3;
+
 	WeekPay payDay = WeekPay::Segunda;
 	Manager managerA(CPF("123.456.789-10"), "José", 1000, "555", payDay);
 	std::cout << (unsigned short int) payDay << std::endl;
+
+	TestSaque(GT3);
 
 }

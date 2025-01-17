@@ -29,8 +29,8 @@ void Account::operator += (float deposit) {
 	cashIn(deposit);
 }
 
-void Account::cashOut(float withdraw) {
-	if (balance > 0) {
+std::variant<Account::resCashOut, float> Account::cashOut(float withdraw) {
+	if (balance >= withdraw) {
 		//Definia a taxa de acordo com a opção. Agora temos uma classe para a outra taxação.
 		/*short int typeAccount = 0;
 		std::cout << "Gostarias de sacar da CC(1) ou Poupança(2)?" << std::endl;
@@ -48,11 +48,17 @@ void Account::cashOut(float withdraw) {
 			balance -= (withdraw + tax);
 			std::cout << "Valor de " << withdraw << " sacado com sucesso! (Tarifa de saque: " << tax << ")." << std::endl;
 			std::cout << "Seu saldo agora é de " << balance << std::endl;
+			return balance;
 		}
-		else std::cout << "Saldo insuficiente para saque com tarifa!" << std::endl;
-		
+		else {
+			std::cout << "Saldo insuficiente para saque com tarifa!" << std::endl;
+			return FaltaSaldo;
+		}
 	}
-	else std::cout << "Saldo insuficiente para saque!" << std::endl;
+	else {
+		std::cout << "Saldo insuficiente para saque!" << std::endl;
+		return SemSaldo;
+	}
 }
 
 void Account::getAccounts() {

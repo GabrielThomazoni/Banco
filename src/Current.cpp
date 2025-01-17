@@ -10,8 +10,8 @@ float Current::valTax() const {
 }
 
 void Current::transferTo(Account& account, float value) {
-	cashOut(value);
-	account.cashIn(value);
+	auto res = cashOut(value);
+	if(res.index() == 1) account.cashIn(value);
 }
 
 void Current::operator += (Current& transfAccount) {
